@@ -1,2 +1,1 @@
-<!-- Documentation for the command "sum": Rosa -->
-<!-- Please fill in a function description (inputs, outputs, logic) and input validation -->
+[SUM_command_documentation.docx](https://github.com/user-attachments/files/34323472/SUM_command_documentation.docx)
