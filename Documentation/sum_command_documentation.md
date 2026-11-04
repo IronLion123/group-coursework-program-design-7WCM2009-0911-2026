@@ -32,27 +32,37 @@ To compute the Sum equation up to the unit fraction $n$:
 
 # Function
 ```kotlin
-fun calculateHarmonic(n: Int): Double {
-    // input validation
-    if (n <= 0) {
-        throw IllegalArgumentException("n must be a whole number (no decimals) between 1 and ${Int.MAX_VALUE}") // detailed error message to mitigate further errors
-    }
-    
-    // container for the total
-    var sum = 0.0
-    
-    // loop to calculate fractions and add them all together
-    for (i in 1..n) {
-        sum = sum + (1.0 / i)
-    }
-    return sum
-}
+val MAX_N: Int = 100
 
-fun main() {
-    println("Please input a whole number between 1 and ${Int.MAX_VALUE}. n Must be a whole number") // clearly communicates valid inputs to the user
-    
-    // Example call to test the code
-    val n = 5
-    val result = calculateHarmonic(n)
-    println("H$n =$result")
+fun calculateHarmonic(n: String): String {
+   // convert to Integer
+   val n_converted: Int? = n.toIntOrNull()
+
+   //input validation
+   when {
+       n_converted == null -> throw IllegalArgumentException("$n is not a valid Integer")
+       n_converted <= 0 -> throw IllegalArgumentException("$n is not between 1 and $MAX_N.")
+       n_converted > MAX_N -> throw IllegalArgumentException("$n cannot be larger than $MAX_N.")
+   }
+
+   //  container for the total
+   var sum: Double = 0.0
+
+   // loop to calculate fractions and add them all together
+   for (i: Int in 1..n_converted) {
+       sum = sum + (1.0 / i)
+   }
+
+   // Return the result, limited to 3 decimal places
+   val formattedResult: String = String.format(java.util.Locale.US, "%.3f", sum)
+   return formattedResult
 }
+fun main() {
+   println("Please input a whole number (no decimals) between 1 and $MAX_N.") // clearly communicates valid inputs to the user
+
+   //Example call to test the code
+   val n: String = "5"
+   val result: String = calculateHarmonic(n)
+   println("H$n = $result (to 3 decimal places)")
+}
+```
