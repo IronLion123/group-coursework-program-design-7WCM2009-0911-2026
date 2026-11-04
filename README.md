@@ -20,7 +20,7 @@ The complete project requirements can be found in the file `Documentation/Course
 
 ### Setup
 
-#### Step 1: Install JDK 21
+#### Step 1: Install JDK 25
 
 Check whether Java is already installed:
 
@@ -30,10 +30,10 @@ java -version
 
 If the command is missing or shows a version other than 21, install a JDK:
 
-- **Windows:** `winget install EclipseAdoptium.Temurin.21.JDK`
-- **macOS:** `brew install openjdk@21`
-- **Linux (Debian/Ubuntu):** `sudo apt install openjdk-21-jdk`
-- **Any OS (SDKMAN):** `sdk install java 21.0.4-tem` (run `sdk list java` to see current versions)
+- **Windows:** `winget install EclipseAdoptium.Temurin.25.JDK`
+- **macOS:** `brew install openjdk@25`
+- **Linux (Debian/Ubuntu):** `sudo apt install openjdk-25-jdk`
+- **Any OS (SDKMAN):** `sdk install java 25.0.5.0+8-tem`
 
 After installing, open a new terminal and run `java -version` again to confirm.
 
