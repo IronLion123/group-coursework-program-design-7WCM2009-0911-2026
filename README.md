@@ -8,7 +8,7 @@
 ## Coursework Description
 
 ### Project Title
-Interactive Kotlin Command-Line Utility
+Interactive Kotlin Command-Line Utility: `ppd_cli_tool`
 
 
 ### Objective
@@ -18,6 +18,59 @@ Interactive Kotlin Command-Line Utility
 
 The complete project requirements can be found in the file `Documentation/Coursework Description.pdf`.
 
-### Submission deadline
+### Setup
 
-The coursework must be handed in before 9:00 AM UK time on 9th November 2026.
+#### Step 1: Install JDK 17 or newer
+
+Check whether Java is already installed:
+
+```bash
+java -version
+```
+
+If the command is missing or shows a version below 17, install a JDK:
+
+- **Windows:** `winget install EclipseAdoptium.Temurin.17.JDK`
+- **macOS:** `brew install openjdk@17`
+- **Linux (Debian/Ubuntu):** `sudo apt install openjdk-17-jdk`
+- **Any OS (SDKMAN):** `sdk install java 17.0.12-tem` (run `sdk list java` to see current versions)
+
+After installing, open a new terminal and run `java -version` again to confirm.
+
+#### Step 2: Clone the repository
+
+```bash
+git clone https://github.com/IronLion123/group-coursework-program-design-7WCM2009-0911-2026.git
+cd group-coursework-program-design-7WCM2009-0911-2026
+```
+
+#### Step 3: Build the tool
+
+- **macOS and Linux:**
+  ```bash
+  ./gradlew installDist
+  ```
+- **Windows:**
+  ```bash
+  .\gradlew.bat installDist
+  ```
+
+#### Step 4: Run the tool
+
+- **macOS and Linux:**
+  ```bash
+  build/install/ppd_cli_tool/bin/ppd_cli_tool
+  ```
+- **Windows:**
+  ```bash
+  build\install\ppd_cli_tool\bin\ppd_cli_tool.bat
+  ```
+
+You should see the welcome message and menu. Type `!exit` to quit.
+
+
+
+
+
+
+
