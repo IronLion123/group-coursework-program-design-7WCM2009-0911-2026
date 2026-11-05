@@ -28,7 +28,7 @@ Check whether Java is already installed:
 java -version
 ```
 
-If the command is missing or shows a version other than 21, install a JDK:
+If the command is missing or shows a version other than 25, install a JDK:
 
 - **Windows:** `winget install EclipseAdoptium.Temurin.25.JDK`
 - **macOS:** `brew install openjdk@25`
