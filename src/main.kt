@@ -23,28 +23,37 @@ fun main(): Unit {
 
         when (prompt("Select an option: ") ?: return) {
             "1" -> {
-                val n = prompt("Enter an integer: ") ?: return
-                try {
-                    println("\nResult: ${calculateHarmonic(n)}")
-                } catch (exc: Exception) {
-                    println("\nError: ${exc.message}")
+                while (true) {
+                    val n = prompt("Enter an integer: ") ?: return
+                    try {
+                        println("\nResult: ${calculateHarmonic(n)}")
+                        break
+                    } catch (exc: Exception) {
+                        println("\nError: ${exc.message}")
+                    }
                 }
             }
             "2" -> {
-                val a = prompt("Enter the first integer: ") ?: return
-                val b = prompt("Enter the second integer: ") ?: return
-                try {
-                    println("\nResult: ${calculateGcd(a, b)}")
-                } catch (exc: Exception) {
-                    println("\nError: ${exc.message}")
+                while (true) {
+                    val a = prompt("Enter the first integer: ") ?: return
+                    val b = prompt("Enter the second integer: ") ?: return
+                    try {
+                        println("\nResult: ${calculateGcd(a, b)}")
+                        break
+                    } catch (exc: Exception) {
+                        println("\nError: ${exc.message}")
+                    }
                 }
             }
             "3" -> {
-                val n = prompt("Enter an integer: ") ?: return
-                try {
-                    println("\nResult: ${calculateFibonacciSum(n)}")
-                } catch (exc: Exception) {
-                    println("\nError: ${exc.message}")
+                while (true) {
+                    val n = prompt("Enter an integer: ") ?: return
+                    try {
+                        println("\nResult: ${calculateFibonacciSum(n)}")
+                        break
+                    } catch (exc: Exception) {
+                        println("\nError: ${exc.message}")
+                    }
                 }
             }
             "!help" -> println("\n${help()}")
